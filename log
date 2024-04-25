@@ -320,3 +320,18 @@ Thu 25 Apr 2024 04:03:29 PM UTC:
  tests:  12|3
 total_score: 40/70
 3c747fe
+Thu 25 Apr 2024 04:03:58 PM UTC: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:80:7: error: expected expression before ‘}’ token
+   80 |       }
+      |       ^
+hashmap.c:80:7: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+hashmap.c:70:6: note: declared here
+   70 | void eraseMap(HashMap * map,  char * key)
+      |      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+691838f
