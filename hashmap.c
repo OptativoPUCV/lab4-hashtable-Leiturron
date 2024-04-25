@@ -101,10 +101,9 @@ Pair * searchMap(HashMap * map,  char * key)
 
 Pair * firstMap(HashMap * map) {
   long pos = map->current;
-  while(map->buckets[pos] == NULL)
+  while(map->buckets[pos]->key == NULL)
     {
       pos++;
-      printf("%ld", pos);
       if(pos == map->capacity) return NULL;
     }
   map->current = pos;
