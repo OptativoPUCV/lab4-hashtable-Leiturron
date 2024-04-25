@@ -70,6 +70,7 @@ void eraseMap(HashMap * map,  char * key)
       pos++;
     }
   map->buckets[pos]->key = NULL;
+  map->size --;
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
