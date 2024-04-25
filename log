@@ -174,3 +174,14 @@ Thu 25 Apr 2024 03:32:00 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 311d508
+Thu 25 Apr 2024 03:33:11 PM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:111:1: error: control reaches end of non-void function [-Werror=return-type]
+  111 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+f80845e
