@@ -49,10 +49,10 @@ void insertMap(HashMap * map, char * key, void * value)
   }
   else
   {
-    while(map->buckets[pos] != NULL)
+    while(map->buckets[pos] != NULL || map->buckets[pos]->key != NULL)
       {
         pos++;
-        if(map->buckets[pos] == NULL)
+        if(map->buckets[pos] == NULL || map->buckets[pos]->key != NULL)
           break;
       }
     map->buckets[pos] = createPair(key, value);
