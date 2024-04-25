@@ -70,7 +70,11 @@ void eraseMap(HashMap * map,  char * key)
       if(strcmp(map->buckets[pos]->key, key) != 0)
         pos++;
       else
+      {
         map->buckets[pos]->key = NULL;
+        map->size --;
+        break;
+      }
     }
 }
 
