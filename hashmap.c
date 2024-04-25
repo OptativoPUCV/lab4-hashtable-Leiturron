@@ -51,6 +51,9 @@ void insertMap(HashMap * map, char * key, void * value)
     }
   map->buckets[pos] = createPair(key, value);
   map->size++;
+
+  float verifi = (float)map->size/map->capacity;
+  if(verifi > 0.7) enlarge(map);
 }
 
 void enlarge(HashMap * map) {
