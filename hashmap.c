@@ -90,7 +90,10 @@ Pair * searchMap(HashMap * map,  char * key)
   while(map->buckets[pos] != NULL)
     {
       if(strcmp(map->buckets[pos]->key, key) == 0)
+      {
+        map->current = pos;
         return map->buckets[pos];
+      }
       pos++;
     }
   return NULL;
