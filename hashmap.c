@@ -101,6 +101,7 @@ Pair * searchMap(HashMap * map,  char * key)
 
 Pair * firstMap(HashMap * map) {
   long pos = map->current;
+  printf("%ld", pos);
   while(map->buckets[pos]->key == NULL)
     {
       pos += 1;
