@@ -68,13 +68,13 @@ void eraseMap(HashMap * map,  char * key)
   while(map->buckets[pos]->key != NULL && strcmp(map->buckets[pos]->key, key) != 0)
     {
       pos++;
-      if(strcmp(map->buckets[pos]->key, key) == 0)
-      {
-        map->buckets[pos]->key = NULL;
-        map->size --;
-        return;
-      }
     }
+  if(strcmp(map->buckets[pos]->key, key) == 0)
+  {
+    map->buckets[pos]->key = NULL;
+    map->size --;
+    return;
+  }
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
