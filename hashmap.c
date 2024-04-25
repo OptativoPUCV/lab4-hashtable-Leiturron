@@ -107,7 +107,7 @@ Pair * firstMap(HashMap * map) {
       if(map->buckets[pos]->key == NULL && pos == map->capacity) 
         return NULL;
     }
-  if(map->buckets[pos]->key != NULL) return map->buckets[pos];
+  return map->buckets[pos];
 }
 
 Pair * nextMap(HashMap * map) {
