@@ -106,6 +106,7 @@ Pair * firstMap(HashMap * map) {
       pos++;
       if(pos == map->capacity) return NULL;
     }
+  printf("%ld", pos);
   map->current = pos;
   return map->buckets[pos];
 }
