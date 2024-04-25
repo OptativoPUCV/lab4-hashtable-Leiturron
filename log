@@ -293,3 +293,18 @@ Thu 25 Apr 2024 04:00:08 PM UTC:
  tests:  12|3
 total_score: 40/70
 34b74af
+Thu 25 Apr 2024 04:01:01 PM UTC: 
+ hashmap.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:77:6: error: argument 1 null where non-null expected [-Werror=nonnull]
+   77 |   if(strcmp(map->buckets[pos]->key, key) == 0)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from test.c:3:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/string.h:156:12: note: in a call to function ‘strcmp’ declared ‘nonnull’
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |            ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a0ff690
