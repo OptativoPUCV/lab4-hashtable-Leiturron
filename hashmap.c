@@ -42,7 +42,6 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) 
 {
   long pos = hash(key, map->capacity);
-  printf("--%ld\n",pos);
   while(map->buckets[pos] != NULL)
     {
       pos++;
