@@ -103,7 +103,7 @@ Pair * firstMap(HashMap * map) {
   long pos = map->current;
   while(map->buckets[pos]->key == NULL)
     {
-      pos++;
+      pos += 1;
       if(pos == map->capacity) return NULL;
     }
   map->current = pos;
