@@ -74,12 +74,6 @@ void eraseMap(HashMap * map,  char * key)
     {
       pos++;
     }
-  if(strcmp(map->buckets[pos]->key, key) == 0)
-  {
-    map->buckets[pos]->key = NULL;
-    map->size --;
-    return;
-  }
 }
 
 Pair * searchMap(HashMap * map,  char * key) 
